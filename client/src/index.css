@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Custom styles for vulnerability indicators */
+.vulnerability-indicator {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+.vulnerability-indicator.vulnerable {
+  @apply bg-danger-100 text-danger-700;
+}
+
+.vulnerability-indicator.secure {
+  @apply bg-success-100 text-success-700;
+}
+
+.attack-payload {
+  @apply bg-gray-100 border border-gray-300 rounded px-2 py-1 font-mono text-sm;
+}
+
+.demo-card {
+  @apply bg-white rounded-lg shadow-md p-6 border border-gray-200;
+}
+
+.security-note {
+  @apply text-sm p-3 rounded-md border-l-4;
+}
+
+.security-note.warning {
+  @apply bg-warning-50 border-warning-400 text-warning-700;
+}
+
+.security-note.success {
+  @apply bg-success-50 border-success-400 text-success-700;
+}
+
+.security-note.error {
+  @apply bg-danger-50 border-danger-400 text-danger-700;
+}
